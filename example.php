@@ -13,8 +13,8 @@
   * See the License for the specific language governing permissions and
   * limitations under the License.
   */
-  require_once 'google-api-php-client/src/apiClient.php';
-  require_once 'google-api-php-client/src/contrib/apiPlusService.php';
+  require_once 'google-api-php-client/src/Google/Client.php';
+  require_once 'google-api-php-client/src/Google/Service.php';
 session_start();
 $id = $_POST['id'];
 $client = new apiClient();
