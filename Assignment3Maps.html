@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDZTQwHtbFe_o19KskwkylBBbVYOrX-spE&sensor=false">
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDZTQwHtbFe_o19KskwkylBBbVYOrX-spE">
 </script>
 
 <script>
@@ -12,7 +12,7 @@ var mapProp = {
   zoom:7,
   mapTypeId:google.maps.MapTypeId.ROADMAP
   };
-var map = new google.maps.Map(document.getElementById("map")
+var map = new google.maps.Map(document.getElementById("googleMap")
   ,mapProp);
 var marker=new google.maps.Marker({
   position:myCenter,
@@ -27,7 +27,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 </head>
 
 <body>
-<div id="map" style="width:500px;height:380px;"></div>
+<div id="googleMap" style="width:500px;height:380px;"></div>
 
 </body>
 </html>
