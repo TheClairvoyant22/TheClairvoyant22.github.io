@@ -4,7 +4,7 @@
 <style type="text/css">
   html { height: 100% }
   body { height: 100%; margin: 0; padding: 0 }
-  #map-canvas { height: 100% }
+  #map-canvas { height: 75% }
 </style>
 <script type = "text/javascript" src = "https://maps.googleapis.com/maps/api/js?key=AIzaSyDZTQwHtbFe_o19KskwkylBBbVYOrX-spE">
 </script>
@@ -12,16 +12,18 @@
 <script type = "text/javascript">
 function initialize()
 {
+var myLatlng = new google.maps.LatLng(33.952449, -84.547693);
 var mapProp = {
-  center:new google.maps.LatLng(33.952449, -84.547693),
-  zoom:7,
+  center: myLatlng,
+  zoom:15,
   mapTypeId:google.maps.MapTypeId.ROADMAP
   };
 var map = new google.maps.Map(document.getElementById("map-canvas")
   ,mapProp);
 var marker = new google.maps.Marker({
-  position:myCenter,
+  position:myLatlng,
   animation:google.maps.Animation.BOUNCE
+  title: "Marietta, GA"
   });
 
 marker.setMap(map);
@@ -33,7 +35,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 </head>
 
 <body>
-<div id="map-canvas" style = "height : 100%"></div>
+<div id="map-canvas" style = "height : 75%"></div>
 
 </body>
 </html>
